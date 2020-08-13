@@ -1,5 +1,13 @@
 module.exports = {
-  devServer: {
-    proxy: 'http://localhost:8080'
-    }
-  };
+  // productionSourceMap: false,
+  // pluginOptions: {
+  //   i18n: {
+  //     enableInSFC: true
+  //   }
+  // },
+  // devServer: {
+  //   // host: 'localhost',
+  //   hot: true,
+  //   disableHostCheck: true
+  // }
+}

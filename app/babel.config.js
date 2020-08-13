@@ -1,5 +1,10 @@
+var path = require('path');
+var fs = require('fs');
+
 module.exports = {
-  presets: [
-    '@vue/cli-plugin-babel/preset'
-  ]
-}
+};
+
+// https: {
+//     key: fs.readFileSync('/etc/ssl/private/domain.key'),
+//     ca: fs.readFileSync('/etc/ssl/certs/chained.pem')
+// }

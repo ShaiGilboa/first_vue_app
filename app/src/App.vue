@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <Product imageSrc="../assets/vmSocks-green-onWhite" />
+    <Navbar />
+    <Product :imageSrc="socks-green.png" :imageAlt='green-socks' product='Socks' quantity='3' />
+    <!-- <Product imageSrc="./assets/socks-green.png" imageAlt='blue-socks'/> -->
 
   </div>
 </template>
@@ -10,12 +12,14 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import Product from './components/Product.vue';
+import Navbar from './components/Navbar.vue';
 
 export default {
   name: 'App',
   components: {
     // HelloWorld,
     Product,
+    Navbar,
   }
 }
 </script>
