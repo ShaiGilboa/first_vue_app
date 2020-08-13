@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Navbar />
-    <Product :imageSrc="socks-green.png" :imageAlt='green-socks' product='Socks' quantity='3' />
+    <Product :imageSrc="'../assets/socks-green.png'" :name="`soks-green`" :imageAlt='`green-socks`' product='Socks' :quantity="5" :details="['80% cotton', '20% polyester', 'Gender-neutral']" :varients="[{varientId: '1', varientColor: 'green'}, {varientId: '2', varientColor: 'blue'}]"/>
     <!-- <Product imageSrc="./assets/socks-green.png" imageAlt='blue-socks'/> -->
 
   </div>
@@ -19,6 +19,7 @@ export default {
   components: {
     // HelloWorld,
     Product,
+
     Navbar,
   }
 }
