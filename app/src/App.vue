@@ -3,7 +3,23 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Navbar />
-    <Product :imageSrc="'../assets/socks-green.png'" :name="`soks-green`" :imageAlt='`green-socks`' product='Socks' :quantity="5" :details="['80% cotton', '20% polyester', 'Gender-neutral']" :varients="[{varientId: '1', varientColor: 'green'}, {varientId: '2', varientColor: 'blue'}]"/>
+    <Product :imageSrc="'../assets/socks-green.png'" :name="`soks-green`" :imageAlt='`green-socks`' product='Socks' :details="['80% cotton', '20% polyester', 'Gender-neutral']" 
+    :varients="[
+      {
+        varientId: '1',
+        varientColor: 'green',
+        varientImage: '../assets/socks-green.png',
+        varientImageAlt: 'green socks',
+        varientQuantity: 20,
+      },
+      {
+        varientId: '2',
+        varientColor: 'blue',
+        varientImage: '../assets/socks-blue.png',
+        varientImageAlt: 'blue socks',
+        varientQuantity: 1,
+      }
+      ]"/>
     <!-- <Product imageSrc="./assets/socks-green.png" imageAlt='blue-socks'/> -->
 
   </div>
