@@ -6,6 +6,8 @@ first attempt of a vue app
 This is the first attempt of a Vue app. A structure for a simple cart.
 Have a <a href="https://first-vue-app.vercel.app/" target="_blank">Look</a>!
 
+The cart is set up to have just one kind of sock, so when you switch between the colors, the amount in the cart will switch to maximum possible for that new sock or the cart amount.
+
 ---
 
 ### Info
