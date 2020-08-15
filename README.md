@@ -4,7 +4,7 @@ first attempt of a vue app
 ---
 
 This is the first attempt of a Vue app. A structure for a simple cart.
-Have a (Look)[https://first-vue-app.vercel.app/]!
+Have a <a href="https://first-vue-app.vercel.app/" target="_blank">Look</a>!
 
 ---
 
