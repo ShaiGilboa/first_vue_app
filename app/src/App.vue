@@ -3,6 +3,7 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Navbar />
+    <div class="content">
     <Product
       @change-cart="changeCart"
       @update-cart="updateCart"
@@ -27,6 +28,7 @@
       }
       ]"/>
       <Cart :cart="cart" />
+      </div>
     <!-- <Product imageSrc="./assets/socks-green.png" imageAlt='blue-socks'/> -->
 
   </div>
@@ -70,6 +72,32 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding-top: 10px;
+  margin: 0;
+  background-color: #e9c46a;
+  min-width: 100%;
+  box-sizing: border-box;
+  min-height: 100%;
 }
+body{
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+body {overflow: -moz-scrollbars-none;}
 </style>

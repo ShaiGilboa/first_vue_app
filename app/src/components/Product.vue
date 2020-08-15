@@ -1,7 +1,13 @@
 <template>
   <div id='Product' data-css='Product' class='' >
-    <img v-show="selected === 0" src="../assets/socks-green.png" :alt='imageAlt' />
-    <img v-show="selected === 1" src="../assets/socks-blue.png" :alt='imageAlt' />
+    <div class="images">
+      <transition name="fade">
+      <img v-show="selected === 0" src="../assets/socks-green.png" :alt='imageAlt' />
+      </transition>
+      <transition name="fade">
+      <img v-show="selected === 1" src="../assets/socks-blue.png" :alt='imageAlt' />
+      </transition>
+    </div>
     <div>
       <ProductInfo :name="product" :reminder="reminder"
       :details="details" :premium="premium" />
@@ -88,11 +94,43 @@
 <style lang="scss" scoped>
   #Product {
     display: flex;
+      flex-direction: column;
+      padding: 5px;
     }
-  
-  img {
+  .images {
+    width: 100px;
+      height: 100px;
+    position: relative;
+    margin: 5px auto 0;
+  }
+  img{
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      position: absolute;
+    left: 0;
+    }
+
+  .fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+  @media (min-width: 500px) {
+    #Product {
+      flex-direction: row;
+    }
+    .images {
+    width: 150px;
+    height: 150px;
+  }
+    img {
     width: 150px;
     height: 150px;
   }
 
+
+  }
 </style>
