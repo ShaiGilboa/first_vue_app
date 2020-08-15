@@ -1,10 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Navbar />
-    <Product :imageSrc="'../assets/socks-green.png'" :name="`soks-green`" :imageAlt='`green-socks`' product='Socks' :details="['80% cotton', '20% polyester', 'Gender-neutral']" 
-    :varients="[
+    <Product
+      @change-cart="changeCart"
+      @update-cart="updateCart"
+      product='Socks'
+      :cart="cart"
+      :details="['80% cotton', '20% polyester', 'Gender-neutral']" 
+      :premium='true'
+      :varients="[
       {
         varientId: '1',
         varientColor: 'green',
@@ -20,6 +26,7 @@
         varientQuantity: 1,
       }
       ]"/>
+      <Cart :cart="cart" />
     <!-- <Product imageSrc="./assets/socks-green.png" imageAlt='blue-socks'/> -->
 
   </div>
@@ -29,14 +36,29 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import Product from './components/Product.vue';
 import Navbar from './components/Navbar.vue';
+import Cart from './components/Cart.vue';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      cart: 0,
+    }
+  },
   components: {
     // HelloWorld,
     Product,
-
+    Cart,
     Navbar,
+  },
+  methods: {
+    updateCart(amount) {
+      console.log('amount',amount)
+      this.cart += amount;
+      },
+    changeCart(amount) {
+      this.cart = amount;
+    }
   }
 }
 </script>
