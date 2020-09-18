@@ -2,19 +2,17 @@
   <div id='Product' data-css='Product' class='' >
     <div class="images">
       <transition name="fade">
-      <img v-show="selected === 0" src="../assets/socks-green.png" :alt='imageAlt' />
+        <img v-show="selected === 0" src="../assets/socks-green.png" :alt='imageAlt' />
       </transition>
       <transition name="fade">
-      <img v-show="selected === 1" src="../assets/socks-blue.png" :alt='imageAlt' />
+        <img v-show="selected === 1" src="../assets/socks-blue.png" :alt='imageAlt' />
       </transition>
     </div>
     <div>
       <ProductInfo :name="product" :reminder="reminder"
       :details="details" :premium="premium" />
 
-      <div data-css='color options' 
-        
-      >
+      <div data-css='color options' >
         <ColorOption :varients="varients" :changeColor="changeColor" />
       </div>
 
@@ -130,7 +128,5 @@
     width: 150px;
     height: 150px;
   }
-
-
   }
 </style>
